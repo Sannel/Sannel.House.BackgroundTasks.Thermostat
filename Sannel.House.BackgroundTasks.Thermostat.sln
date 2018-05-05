@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{049C27EC-82F7-4DB6-AB3E-75E2EF41634E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sannel.House.BackgroundTasks.Thermostat", "src\Sannel.House.BackgroundTasks.Thermostat\Sannel.House.BackgroundTasks.Thermostat.csproj", "{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|ARM.ActiveCfg = Debug|ARM
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|ARM.Build.0 = Debug|ARM
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|ARM.Deploy.0 = Debug|ARM
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|x64.ActiveCfg = Debug|x64
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|x64.Build.0 = Debug|x64
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|x64.Deploy.0 = Debug|x64
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|x86.ActiveCfg = Debug|x86
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|x86.Build.0 = Debug|x86
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Debug|x86.Deploy.0 = Debug|x86
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|ARM.ActiveCfg = Release|ARM
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|ARM.Build.0 = Release|ARM
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|ARM.Deploy.0 = Release|ARM
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|x64.ActiveCfg = Release|x64
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|x64.Build.0 = Release|x64
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|x64.Deploy.0 = Release|x64
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|x86.ActiveCfg = Release|x86
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|x86.Build.0 = Release|x86
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5EC1B77D-9E98-4593-AF8A-AAD2481B0C48} = {049C27EC-82F7-4DB6-AB3E-75E2EF41634E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B46E2F6-9144-4EA5-87C7-250809B14C00}
+	EndGlobalSection
+EndGlobal
