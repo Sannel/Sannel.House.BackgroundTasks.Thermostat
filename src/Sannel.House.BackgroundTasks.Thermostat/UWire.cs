@@ -27,11 +27,11 @@ namespace Sannel.House.BackgroundTasks.Thermostat
 			}
 		}
 
-		public IWireDevice GetDeviceById(byte deviceId)
+		public async Task<IWireDevice> GetDeviceByIdAsync(byte deviceId)
 		{
 			var connectionString = new I2cConnectionSettings(deviceId);
 
-			return new UWireDevice(I2cDevice.FromIdAsync(i2cDevice, connectionString).GetResults());
+			return new UWireDevice(await I2cDevice.FromIdAsync(i2cDevice, connectionString));
 		}
 
 		public void Dispose()
