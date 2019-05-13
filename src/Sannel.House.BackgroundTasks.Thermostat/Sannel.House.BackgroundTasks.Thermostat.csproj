@@ -96,6 +96,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="ThermostatSensorEntry.cs" />
+    <Compile Include="ThermostController.cs" />
     <Compile Include="UWireDevice.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StartupTask.cs" />
@@ -159,10 +162,10 @@
       <Version>0.5.15-alpha</Version>
     </PackageReference>
     <PackageReference Include="Sannel.House.Sensor.Devices">
-      <Version>0.6.1-alpha-0000</Version>
+      <Version>0.6.1-alpha-0001</Version>
     </PackageReference>
     <PackageReference Include="Sannel.House.SensorCaptureSDK">
-      <Version>0.0.1-alpha-0001</Version>
+      <Version>0.0.1-alpha-0002</Version>
     </PackageReference>
     <PackageReference Include="Sannel.House.ServerSDK">
       <Version>0.3.0-alpha-0002</Version>

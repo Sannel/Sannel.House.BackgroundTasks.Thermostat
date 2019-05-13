@@ -1,4 +1,5 @@
 using System;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Sannel.House.BackgroundTasks.Thermostat
 	public sealed class StartupTask : IBackgroundTask
 	{
 		private BackgroundTaskDeferral deferral;
+		private ThermostController controller;
 
 		public async void Run(IBackgroundTaskInstance taskInstance)
 		{
@@ -26,36 +28,15 @@ namespace Sannel.House.BackgroundTasks.Thermostat
 			// described in http://aka.ms/backgroundtaskdeferral
 			//
 			deferral = taskInstance.GetDeferral();
+			taskInstance.Canceled += this.taskChanceled;
 
-			var wire = new UWire();
+			var s = await Startup.GetStartupAsync();
+			controller = s.Provider.GetService<ThermostController>();
+			controller.Start(); // start the controller class
+		}
 
-			await wire.InitAsync();
-
-			using (var sensor = new BME280(await wire.GetDeviceByIdAsync(0x77)))
-			{
-				try
-				{
-					sensor.RunMode = 3;
-					sensor.TemperatureOverSample = 5;
-					sensor.PressureOverSample = 5;
-					sensor.HumidityOverSample = 5;
-					sensor.Begin();
-					while (true)
-					{
-						var temp = sensor.GetTemperatureCelsius();
-						var press = sensor.GetPressure();
-						var rh = sensor.GetRelativeHumidity();
-						Debug.WriteLine($"temp {temp}");
-						Debug.WriteLine($"press {press}");
-						Debug.WriteLine($"rh {rh}");
-						await Task.Delay(500);
-					}
-				}
-				catch(Exception ex)
-				{
-					Debugger.Break();
-				}
-			}
+		private void taskChanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
+		{
 		}
 	}
 }
